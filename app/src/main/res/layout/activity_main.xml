@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E"
+    tools:context=".MainActivity"
+    android:theme="@android:style/Theme.Black.NoTitleBar">
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="374dp"
+        android:layout_height="338dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="12dp"
+        android:textAlignment="viewEnd"
+        android:textColor="#BCBCBC"
+        android:textSize="20dp"
+        android:verticalScrollbarPosition="defaultPosition"
+        app:layout_constraintBottom_toTopOf="@+id/stervse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otlad"
+        tools:flow_verticalAlign="bottom" />
+
+    <Button
+        android:id="@+id/dva"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:background="#1E1E1E"
+        android:onClick="dvaClick"
+        android:text="2"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/nul"
+        app:layout_constraintStart_toEndOf="@+id/odin" />
+
+    <Button
+        android:id="@+id/scoblev"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:background="#1E1E1E"
+        android:onClick="scob1Click"
+        android:text="("
+        android:textColor="#FD7702"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/sem"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/zapyat"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:background="#1E1E1E"
+        android:onClick="zapClick"
+        android:text=","
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nul" />
+
+    <Button
+        android:id="@+id/stepen"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="4dp"
+        android:background="#1E1E1E"
+        android:onClick="stepenClick"
+        android:text="^"
+        android:textColor="#FD7702"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ravno"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="4dp"
+        android:background="#1E1E1E"
+        android:onClick="ravnoClick"
+        android:text="="
+        android:textColor="#FD7702"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/zapyat" />
+
+    <Button
+        android:id="@+id/sem"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:background="#1E1E1E"
+        android:onClick="semClick"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/chetir"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/koren"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:background="#1E1E1E"
+        android:text="√"
+        android:textColor="#FD7702"
+        android:textSize="33dp"
+        app:layout_constraintBottom_toTopOf="@+id/devyat"
+        app:layout_constraintStart_toEndOf="@+id/scobprav" />
+
+    <Button
+        android:id="@+id/tri"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:background="#1E1E1E"
+        android:onClick="triClick"
+        android:text="3"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/zapyat"
+        app:layout_constraintStart_toEndOf="@+id/dva" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="13dp"
+        android:background="#1E1E1E"
+        android:onClick="minusClick"
+        android:text="−"
+        android:textColor="#FD7702"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/ravno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/tri" />
+
+    <Button
+        android:id="@+id/shest"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:background="#1E1E1E"
+        android:onClick="shestClick"
+        android:text="6"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/tri"
+        app:layout_constraintStart_toEndOf="@+id/pyat" />
+
+    <Button
+        android:id="@+id/scobprav"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:background="#1E1E1E"
+        android:onClick="scob2Click"
+        android:shadowColor="#1E1E1E"
+        android:text=")"
+        android:textColor="#FD7702"
+        android:textColorHighlight="#1E1E1E"
+        android:textColorHint="#1E1E1E"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/vosem"
+        app:layout_constraintStart_toEndOf="@+id/scoblev" />
+
+    <Button
+        android:id="@+id/devyat"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:background="#1E1E1E"
+        android:onClick="devyatClick"
+        android:text="9"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/shest"
+        app:layout_constraintStart_toEndOf="@+id/vosem" />
+
+    <Button
+        android:id="@+id/delit"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="13dp"
+        android:background="#1E1E1E"
+        android:onClick="delitClick"
+        android:text="÷"
+        android:textColor="#FD7702"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/umnozh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/koren" />
+
+    <Button
+        android:id="@+id/stervse"
+        style="@style/stand"
+        android:layout_width="97dp"
+        android:layout_marginStart="10dp"
+        android:onClick="stervseClick"
+        android:text="C"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/scoblev"
+        app:layout_constraintEnd_toStartOf="@+id/ostat"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/otl"
+        style="@style/stand"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="1dp"
+        android:onClick="otlClick"
+        android:text="Отладка"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/koren"
+        app:layout_constraintEnd_toStartOf="@+id/udalposl"
+        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintStart_toEndOf="@+id/ostat" />
+
+    <Button
+        android:id="@+id/umnozh"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="13dp"
+        android:background="#1E1E1E"
+        android:onClick="umnClick"
+        android:text="×"
+        android:textColor="#FD7702"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/devyat" />
+
+    <Button
+        android:id="@+id/udalposl"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="13dp"
+        android:background="#1E1E1E"
+        android:onClick="udalposlClick"
+        android:text="⌫"
+        android:textColor="#FD7702"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/delit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/otl" />
+
+    <Button
+        android:id="@+id/odin"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:background="#1E1E1E"
+        android:onClick="odinClick"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/stepen"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ostat"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:background="#1E1E1E"
+        android:onClick="ostClick"
+        android:text="Ост"
+        android:textColor="#FD7702"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/scobprav"
+        app:layout_constraintStart_toEndOf="@+id/stervse" />
+
+    <Button
+        android:id="@+id/chetir"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:background="#1E1E1E"
+        android:onClick="chetireClick"
+        android:text="4"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/odin"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="13dp"
+        android:background="#1E1E1E"
+        android:onClick="plusClick"
+        android:text="+"
+        android:textAllCaps="false"
+        android:textColor="#FD7702"
+        android:textSize="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/shest" />
+
+    <Button
+        android:id="@+id/vosem"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:background="#1E1E1E"
+        android:onClick="vosemClick"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/pyat"
+        app:layout_constraintStart_toEndOf="@+id/sem" />
+
+    <Button
+        android:id="@+id/pyat"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:background="#1E1E1E"
+        android:onClick="pyatClick"
+        android:text="5"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/dva"
+        app:layout_constraintStart_toEndOf="@+id/chetir" />
+
+    <Button
+        android:id="@+id/nul"
+        android:layout_width="97dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:background="#1E1E1E"
+        android:onClick="nolClick"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/stepen" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="81dp"
+        android:background="#555555"
+        app:layout_constraintBottom_toTopOf="@+id/stervse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/output" />
+
+    <TextView
+        android:id="@+id/otlad"
+        android:layout_width="397dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/output"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

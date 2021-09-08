@@ -1,0 +1,25 @@
+Index: app/src/main/java/com/example/caculya/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/caculya/MainActivity.java b/app/src/main/java/com/example/caculya/MainActivity.java
+--- a/app/src/main/java/com/example/caculya/MainActivity.java	(date 1631023347083)
++++ b/app/src/main/java/com/example/caculya/MainActivity.java	(date 1631023347083)
+@@ -111,12 +111,12 @@
+     }
+     public void umnClick(View view)
+     {
+-        dobznak('÷');
+-    }
+-    public void delitClick(View view)
+-    {
+         dobznak('×');
+     }
++    public void delitClick(View view)
++    {
++        dobznak('÷');
++    }
+     public void plusClick(View view)
+     {
+         dobznak('+');

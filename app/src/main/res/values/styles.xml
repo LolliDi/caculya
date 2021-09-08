@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="stand">
+        <item name="android:layout_width">88dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginStart">29dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:background">@color/tema</item>
+        <item name="android:textColor">#FD7702</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+</resources>
