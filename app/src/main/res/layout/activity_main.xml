@@ -114,6 +114,7 @@
         android:text="√"
         android:textColor="#FD7702"
         android:textSize="33dp"
+        android:onClick="korenClick"
         app:layout_constraintBottom_toTopOf="@+id/devyat"
         app:layout_constraintStart_toEndOf="@+id/scobprav" />
 

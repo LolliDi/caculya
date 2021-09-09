@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         if (chi.length()==0 && !znaki.isEmpty())
         {
             int z = znaki.size()-1;
-            if(!znaki.get(z).equals('(')&&!znaki.get(z).equals(')'))
+            if(!znaki.get(z).equals('(')&&!znaki.get(z).equals(')')&&!znaki.get(z).equals('√'))
             {
                 if (chisla.get(chisla.size()-1)%1==0)
                     chi = Integer.toString(chisla.get(chisla.size()-1).intValue());
@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }
-
             chisla.remove(chisla.size()-1);
             znaki.remove(znaki.size()-1);
             output.setText(p.substring(0,p.length()-1));
@@ -85,10 +84,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void dobchislo(char ch)
     {
-        TextView output = findViewById(R.id.output);
-        chi+=ch;
-        output.setText(output.getText()+String.valueOf(ch));
-
+        if((znaki.size()>0&&!znaki.get(znaki.size()-1).equals(')'))||znaki.size()==0)
+        {
+            TextView output = findViewById(R.id.output);
+            chi+=ch;
+            output.setText(output.getText()+String.valueOf(ch));
+        }
     }
     public void dobznak(char zn)
     {
@@ -140,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
             }
             catch (Exception e)
             {
+                otlad.setText("Мы проебались: ");
                 otlad.setText(""+chisla.size()+"(");
                 for(int z = 0; z<chisla.size();z++)
                     otlad.setText(otlad.getText()+""+chisla.get(z)+" ");
@@ -171,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     vih = poiskskob(i);
                     schet(i,vih,true);
+                    i--;
                 }
                 catch (Exception e)
                 {
@@ -188,9 +191,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(chisla.get(i)==null)
                     chisla.remove(i);
-
                 znaki.remove(i);
-
                 return i;
             }
         }
@@ -200,7 +201,15 @@ public class MainActivity extends AppCompatActivity {
     {
         for(int i =vhod; i<vihod;i++)
         {
-            if(znaki.get(i).equals('^'))
+            if(znaki.get(i).equals('√'))
+            {
+                chisla.set(i+1,Math.sqrt(chisla.get(i+1)));
+                chisla.remove(i);
+                znaki.remove(i);
+                i--;
+                vihod--;
+            }
+            else if(znaki.get(i).equals('^'))
             {
                 chisla.set(i,Math.pow(chisla.get(i),chisla.get(i+1)));
                 chisla.remove(i+1);
@@ -285,13 +294,23 @@ public class MainActivity extends AppCompatActivity {
     }
     public void scob1Click(View view)
     {
-        if(chi==""&&(znaki.size()>0||(znaki.size()==0&&chisla.size()==0)))
+        if(chi==""&&((znaki.size()>0&&!znaki.get(znaki.size()-1).equals(')'))||(znaki.size()==0&&chisla.size()==0)))
         {
             znaki.add('(');
             skobki.add('(');
             chisla.add(null);
             TextView output = findViewById(R.id.output);
             output.setText(output.getText()+"(");
+        }
+    }
+    public void korenClick(View view)
+    {
+        if(chi==""&&((znaki.size()>0&&!znaki.get(znaki.size()-1).equals(')'))||(znaki.size()==0&&chisla.size()==0)))
+        {
+            znaki.add('√');
+            chisla.add(null);
+            TextView output = findViewById(R.id.output);
+            output.setText(output.getText()+"√");
         }
     }
     public void stepenClick(View view)
