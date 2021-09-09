@@ -223,7 +223,7 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/koren"
         app:layout_constraintEnd_toStartOf="@+id/udalposl"
-        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ostat" />
 
     <Button
@@ -244,12 +244,13 @@
 
     <Button
         android:id="@+id/udalposl"
-        android:layout_width="97dp"
+        android:layout_width="95dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="13dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="16dp"
         android:background="#1E1E1E"
         android:onClick="udalposlClick"
-        android:text="⌫"
+        android:text="⌫ "
         android:textColor="#FD7702"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/delit"

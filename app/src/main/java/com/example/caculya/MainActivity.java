@@ -152,7 +152,15 @@ public class MainActivity extends AppCompatActivity {
             }
             TextView output = findViewById(R.id.output);
             chi = String.valueOf(chisla.get(0));
-            output.setText(output.getText()+"\n="+chi);
+            if(chi!="NaN")
+            {
+                output.setText(output.getText()+"\n="+chi);
+            }
+            else
+            {
+                output.setText(output.getText()+"\n=ПОСОСИ");
+                chi="";
+            }
             chisla.clear();
 
         }
